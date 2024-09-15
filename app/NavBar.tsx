@@ -25,7 +25,9 @@ const NavBar = () => {
             <ul className='flex space-x-6'>
                 {
                     navItems.map(item =>
-                        <li className={classNames({
+                        <li 
+                        key={item.link}
+                        className={classNames({
                             'text-zinc-900': path === item.link,
                             'text-zinc-500': path !== item.link,
                             'hover:text-zinc-800': true
